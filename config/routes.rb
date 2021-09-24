@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  get 'events', to: 'events#index'
+
+  root 'events#index'
+
+  resources :events
+  # get 'events', to: 'events#index'
+  # get 'events/:id', to: 'events#show', as: 'event'
+  # get 'events/:id/edit', to: 'events#edit', as: 'edit_event'
+  # patch 'events/:id', to: 'events#update'
 end

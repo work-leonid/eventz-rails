@@ -13,7 +13,10 @@
   <body>
 
   <header>
-    <%= image_tag("logo") %>
+    <nav>
+    <%= link_to image_tag("logo"), root_path %>
+      <%= link_to "All events", events_path %>
+    </nav>
   </header>
 
   <div class="content">
