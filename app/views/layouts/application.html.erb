@@ -1,31 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>EventzRails</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>EventzRails</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-  <body>
+<body>
 
-  <header>
-    <nav>
+<header>
+  <nav>
     <%= link_to image_tag("logo"), root_path %>
-      <%= link_to "All events", events_path %>
-    </nav>
-  </header>
+    <%= link_to "All events", events_path %>
+  </nav>
+</header>
 
-  <div class="content">
-    <%= yield %>
-  </div>
+<div class="content">
+  <%= render "layouts/flash" %>
+  <%= yield %>
+</div>
 
-  <footer>
-    &copy; 2021
-  </footer>
+<footer>
+  &copy; 2021
+</footer>
 
-  </body>
+</body>
 </html>
